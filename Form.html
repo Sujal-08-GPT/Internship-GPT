@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Form</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      #form{
+        height:350px;
+        width: 400px;
+        background: lightyellow;
+        margin:auto;
+        padding: 12px;
+      }
+      input[type="text"]{height:25px}
+      input[type="email"]{height:25px}
+      input[type="submit"]{height:25px; background: lightblue; color:white;}
+    </style>
+  </head>
+  <body><form>
+    <div id="form">
+      <label>Name</label><br />
+      <input type="text" required name="fullname"/><br />
+      <label>Email</label><br />
+      <input type="email" required name="email"/><br />
+      <label>Contact no</label><br />
+      <input type="text" required name="contactno"/><br />
+      <label>Message</label><br />
+      <textarea rows="8" cols="40" required name="message"></textarea><br />
+      <input type="submit" id="cta"/>
+    </div></form>
+  </body>
+</html>
