@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Z index</title>
+    <style>
+     *{
+       margin: 0px;
+       padding: 0px;
+     } 
+     #box{
+       height: 400px;
+       width: 400px;
+       border:solid 1px red;
+       margin: auto;
+       position: relative;
+     }
+     #one{
+       height: 150px;
+       width: 150px;
+       background-color: red;
+       position: absolute;
+       left: 0px;
+       bottom:0px;
+       z-index: 1;
+     }
+          #two{
+       height: 150px;
+       width: 150px;
+       background-color: blue;
+       position: absolute;
+       left: 50px;
+       bottom:50px;
+       z-index: 2;
+     }
+     #three{
+       height: 150px;
+       width: 150px;
+       background-color: green;
+       position: absolute;
+       left: 100px;
+       bottom:100px;
+       z-index: 3;
+     }
+     #four{
+       height: 150px;
+       width: 150px;
+       background-color: brown;
+       position: absolute;
+       left: 150px;
+       bottom:150px;
+       z-index: 4;
+     }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <div id="one"></div>
+      <div id="two"></div>
+      <div id="three"></div>
+      <div id="four"></div>
+  </div>
+  </body>
+</html>
