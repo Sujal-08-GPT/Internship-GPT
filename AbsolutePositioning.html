@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Absolute Positioning</title>
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;
+            position: relative;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+        }
+
+        .red {
+            background-color: red;
+            top: 0;
+            left: 0;
+        }
+
+        .green {
+            background-color: green;
+            top: 0;
+            right: 0;
+        }
+
+        .blue {
+            background-color: blue;
+            bottom: 0;
+            left: 0;
+        }
+
+        .purple {
+            background-color: purple;
+            bottom: 0;
+            right: 0;
+        }
+
+        .gray {
+            background-color: gray;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+        }
+        div{
+          text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box red">Red</div>
+        <div class="box green">Green</div>
+        <div class="box blue">Blue</div>
+        <div class="box purple">Purple</div>
+        <div class="gray">Gray</div>
+    </div>
+
+</body>
+</html>
