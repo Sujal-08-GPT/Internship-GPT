@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style >
+     svg{
+       border: solid 1px red;
+     } 
+    </style>
+  </head>
+  <body>
+    <p>Polyline SVG</p>
+    <svg width="300" height="300">
+      <polyline points="0,0 10,30 44,76 77,121 150,150 180,250 300,300 " stroke="green" style="fill:none"></polyline>
+         <polyline points="300,0 270,30 200,70   100,150 0,300" stroke="green" style="fill:none"></polyline>
+     </svg>
+     <p>Polyline SVG accurate</p>
+    <svg width="300" height="300">
+      <polyline points="0,0 300,300" stroke="green" style="fill:none"></polyline>
+         <polyline points="300,0 0,300" stroke="green" style="fill:none"></polyline>
+     </svg>
+     <p>Path</p>
+     <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+       <path d="M100 200 L0 100 L200 100 L100,200" style="fill:red" stroke="green"/>
+          
+     
+     </svg>
+  </body>
+</html>
