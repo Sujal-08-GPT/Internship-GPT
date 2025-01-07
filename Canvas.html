@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Canvas</title>
+    <style>
+    canvas{
+      border: solid 1px black;
+    }
+    </style>
+  </head>
+  <body>
+    <p>default canvas 300*150</p>
+    <canvas></canvas>
+    <p>Rect</p>
+    <canvas id="rect" width="200" height="200"></canvas>
+    <script>
+      var a=document.getElementById("rect");
+      var b=a.getContext("2d");
+      b.fillStyle="red";
+      b.fillRect(50,50,100,100);
+      b.fill();
+      var a=document.getElementById("rect");
+      var b=a.getContext("2d");
+      b.globalAlpha=0.5
+      b.fillStyle="blue";
+      b.fillRect(75,75,100,100);
+      b.fill();
+    </script>
+</body>
+</html>
