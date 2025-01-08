@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Canvas</title>
+    <style>
+    canvas{
+      border: solid 1px black;
+    }
+    </style>
+  </head>
+  <body>
+    <p>Circle</p>
+    <canvas id="circle" width="200" height="200"></canvas>
+    <script>
+      var a=document.getElementById("circle");
+      var b=a.getContext("2d");
+      b.fillStyle="green";
+      b.arc(100,100,40,0,2*3.142);
+      b.fill();
+      
+    </script>
+        <p>Line</p>
+    <canvas id="line" width="200" height="200"></canvas>
+    <script>
+      var a=document.getElementById("line");
+      var b=a.getContext("2d");
+      
+      b.beginPath();
+      b.fillStyle="red";
+      b.arc(100,100,40,0,2*3.142);
+      b.fill();
+      
+      b.beginPath();
+      b.strokeStyle="green";
+      b.moveTo(0,0);
+      b.lineTo(200,200);
+      b.stroke();  
+      
+      b.beginPath();
+      b.strokeStyle="blue";
+      b.moveTo(200,0);
+      b.lineTo(100,100);
+      b.stroke(); 
+      
+      b.beginPath();
+      b.strokeStyle="orange";
+      b.moveTo(0,200);
+      b.lineTo(100,100);
+      b.stroke(); 
+      
+    </script>
+</body>
+</html>
