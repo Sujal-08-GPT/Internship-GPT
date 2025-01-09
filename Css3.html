@@ -27,19 +27,19 @@
         float: left;
       }
       #rotate:hover{
-        transition: 10s;
+        transition: 5s;
         transform: rotate(360deg);
       }
       #scale:hover{
-        transition: 10s;
+        transition: 5s;
         transform: scale(2,2);
       }
       #skew:hover{
-        transition: 10s;
+        transition: 5s;
         transform: skew(30deg,60deg);
       }
       #translate:hover{
-        transition: 10s;
+        transition: 5s;
         transform: translate(60px,90px);
       }
       h1{
@@ -48,7 +48,16 @@
         color: orange;
        
       }
-      
+      .animation{
+        background-color: red;
+        animation-name: digisnare;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes digisnare{
+        from{background-color:red}
+        to{background-color: green}
+      }
     </style>
   </head>
   <body>
@@ -66,6 +75,9 @@
     </div>
     <div class="main">Translate 
       <h1 id="translate">Go</h1>
+    </div>
+    <div class="main animation">
+      Animation 
     </div>
   </body>
 </html>
