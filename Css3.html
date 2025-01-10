@@ -46,7 +46,7 @@
         text-align: center;
         line-height: 250px;
         color: orange;
-       
+
       }
       .animation{
         background-color: red;
@@ -57,6 +57,20 @@
       @keyframes digisnare{
         from{background-color:red}
         to{background-color: green}
+      }
+      .lg{
+        background:linear-gradient(117deg,
+        rgba(91,118,207,1)30%,
+        rgba(37,173,25,1)40%);
+      }
+      .rg{
+        background:radial-gradient(
+        100% 100% at 45% 50%,
+        rgba(15,37,110,1)12%,
+        rgba(37,173,20,1)80%);
+      }
+      .rgba{
+        background-color: rgba(43,52,1,60);
       }
     </style>
   </head>
@@ -79,5 +93,10 @@
     <div class="main animation">
       Animation 
     </div>
+    <div class="main lg">Linear Gradient </div>
+    <div class="main rg">Radial Gradient </div>
+    <div class="main rgba">RGBA Gradient </div>
+  </body>
+  </body>
   </body>
 </html>
