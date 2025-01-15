@@ -29,6 +29,17 @@
     <button onclick="confirm('i am alert with Ok and Cancel button')">Confirm()</button>
     <p>prompt</p>
     <button onclick="prompt('i am alert with Ok , Cancel and textbox button')">Prompt()</button>
-    
+ <p>Confirm Usage</p>  <button onclick="tt()">Confirm()-ClickMe</button>
+<script>
+  function tt(){
+    var a=confirm("Please check which button clicked");
+    if (a==true) {
+      alert("Clicked OK button");
+    }
+    else{
+      alert("Clicked Cancel button ")
+    }
+  }
+</script> 
 </body>
 </html>
