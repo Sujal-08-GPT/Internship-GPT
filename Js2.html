@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Static calculation and Dynamic calculation</title>
+    
+  </head>
+  <body>
+    <h2>Static Calculation</h2>
+    <script type="text/javascript" charset="utf-8">
+      var a=10;
+      var b=10;
+      var tot=a+b;
+      var dif=a-b;
+      var div=a/b;
+      var mul=a*b;
+      document.writeln("Sum:"+tot);
+      document.write("<br>");
+      document.writeln("Diff:"+dif);
+      document.write("<br>");
+      document.writeln("Div:"+div);
+      document.write("<br>");
+      document.writeln("Multi:"+mul);
+    </script>
+    <h2>Dynamic Calculation</h2>
+    <p>Enter number 1</p>
+    <input type="text" id="num1" ><br>
+    <p>Enter number 2</p>
+    <input type="text" id="num2" ><br>
+    <input type="submit" onclick="check()">
+    <script>
+      function check(){
+        var ab=document.getElementById("num1").value;
+        var ba=document.getElementById("num2").value;
+        var sum=Number(ab)+Number(ba);
+        alert("sum:"+sum);
+        
+      }
+    </script>
+    <h2>Event Handling</h2>
+    <p>onclick</p>
+    <button onclick="alert('I will pop-up after single click')">Onclick</button>
+     <p>Double click</p>
+    <button ondblclick="alert('I will pop-up after double click')">Double click</button>
+    <p>Mouse</p>
+    <button onmouseenter="alert('I will pop-up while cursor is placed on me')">Take cursor here</button>
+  
+  <h2>Key Events</h2>
+  <input type="text" id="txt" onkeyup="tt()">
+  <script>
+   function tt(){
+     document.getElementById("txt").style.background="red";
+   }</script>
+     <input type="text" id="txt1" onkeypress="tt1()">
+  <script>
+   function tt1(){
+     document.getElementById("txt1").style.background="red";
+   }
+ 
+ </script>
+ </body>
+</html>
