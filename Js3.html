@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    
+  </head>
+  <body>
+   <p>Enter String</p>
+   <input type="text" id="str"/><br>
+   <input type="button" value="Submit" onclick="check()">
+   <script>
+    function check(){
+      var a=document.getElementById("str").value;
+      document.getElementById("length").innerHTML=a.length;
+      document.getElementById("ucase").innerHTML=a.toUpperCase();
+      document.getElementById("lcase").innerHTML=a.toLowerCase();
+      document.getElementById("substr").innerHTML=a.substr(5,2);
+      document.getElementById("indexof").innerHTML=a.indexOf("haal");
+      document.getElementById("lastindexof").innerHTML=a.lastIndexOf("haal");
+      
+    }
+   </script>
+   <table border="1">
+     <tr>
+       <td>Length</td><td id="length"></td></tr>
+       <td>uppercase</td><td id="ucase"></td></tr>
+       <td>lowercase</td><td id="lcase"></td></tr>
+       <td>substr</td><td id="substr"></td></tr>
+       <td>indexof</td><td id="indexof"></td></tr>
+       <td>lastindexof</td><td id="lastindexof"></td></tr>
+
+   </table>
+  </body>
+</html>
