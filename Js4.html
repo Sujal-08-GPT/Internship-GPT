@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title></title>
+</head>
+  <body>
+   <p>Enter number</p>
+   <input type="text" id="str"/><br>
+   <input type="button" value="Submit" onclick="check()">
+   <script>
+    function check(){
+      var a=document.getElementById("str").value;
+      n=Number(a);
+      document.getElementById("fixed2").innerHTML=n.toFixed(2);
+      document.getElementById("exponential2").innerHTML=n.toExponential(2);
+      document.getElementById("sqrt").innerHTML=Math.sqrt(n);
+      document.getElementById("roundoff").innerHTML=Math.round(n);
+      document.getElementById("pow").innerHTML=Math.pow(n,2);
+      document.getElementById("ceil").innerHTML=Math.ceil(n);
+      document.getElementById("floor").innerHTML=Math.floor(n);
+    }
+   </script>
+   <table border="1">
+     <tr>
+       <td>tofixed(2)</td><td id="fixed2"></td></tr>
+       <td>toexponential(2)</td><td id="exponential2"></td></tr>
+       <td>sqrt</td><td id="sqrt"></td></tr>
+       <td>roundoff</td><td id="roundoff"></td></tr>
+       <td>pow</td><td id="pow"></td></tr>
+       <td>ceil</td><td id="ceil"></td></tr>
+       <td>floor</td><td id="floor"></td></tr>
+</table>
+</body>
+</html>
