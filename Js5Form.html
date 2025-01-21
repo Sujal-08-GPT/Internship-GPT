@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        #form{
+            height: 300px;
+            width: 400px;
+            background-color: light gravy;
+            margin: auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="form">
+        <input type="text" id="name" placeholder="Enter Name"><br>
+        <input type="text" id="email" placeholder="Enter Email"><br>
+        <input type="text" id="no" placeholder="Enter Conatct No"><br>
+        <textarea rows="10" cols="40" id="msg"></textarea><br>
+        <input type="button" value="submit" onclick="tt()">
+    </div>
+<script>
+    function tt()
+    {
+        name=document.getElementById("name").value;
+        document.getElementById("nameval").innerHTML=name;
+    
+      email=document.getElementById("email").value;
+        document.getElementById("emailval").innerHTML=email;
+        
+        no=document.getElementById("no").value;
+        document.getElementById("noval").innerHTML=no;
+         
+        msg=document.getElementById("msg").value;
+        document.getElementById("msgval").innerHTML=msg;
+         
+        
+    }
+</script>
+    <table border="1">
+        <tr><td>Name</td><td id="nameval"></td></tr>
+       <tr><td>Email</td><td id="emailval"></td></tr>
+             <tr><td>number</td></td><td id="noval"></td></tr>
+             <tr><td>Message</td></td><td id="msgval"></td></tr>
+             
+    </table>
+</body>
+</html>
