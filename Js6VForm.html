@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, select, button {
+      padding: 8px;
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 10px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .phone-input {
+      display: flex;
+      align-items: center;
+    }
+    .phone-input select {
+      max-width: 120px;
+      margin-right: 10px;
+    }
+    .full-number {
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+    }
+    .radio-group {
+      margin-top: 15px;
+    }
+    .radio-group label {
+      display: inline-block;
+      margin-right: 20px;
+    }
+    #customStreamGroup {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h2>Student Registration</h2>
+
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="contact">Contact Number:</label>
+      <div class="phone-input">
+        <select id="countryCode" onchange="updateFullNumber()" required>
+          <option value="+91">🇮🇳 India (+91)</option>
+          <option value="+1">🇺🇸 USA (+1)</option>
+          <option value="+44">🇬🇧 UK (+44)</option>
+          <option value="+81">🇯🇵 Japan (+81)</option>
+          <option value="+61">🇦🇺 Australia (+61)</option>
+          <option value="+49">🇩🇪 Germany (+49)</option>
+          <option value="+86">🇨🇳 China (+86)</option>
+          <option value="+33">🇫🇷 France (+33)</option>
+        </select>
+        <input type="text" id="contact" placeholder="Enter your contact number" oninput="updateFullNumber()" required>
+      </div>
+      <div id="fullNumberDisplay" class="full-number"></div>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" placeholder="Enter your email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="qualification">Select Qualification:</label>
+      <select id="qualification" onchange="handleQualificationChange()" required>
+        <option value="">--Select Qualification--</option>
+        <option value="diploma">Diploma</option>
+        <option value="iti">ITI</option>
+        <option value="puc">PUC</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div id="streamGroup" class="form-group">
+      <label for="stream">Select Stream:</label>
+      <select id="stream" disabled required>
+        <option value="">--Select Stream--</option>
+      </select>
+    </div>
+
+    <div id="customStreamGroup" class="form-group">
+      <label for="customStream">Enter Stream:</label>
+      <input type="text" id="customStream" placeholder="Enter your stream">
+    </div>
+
+    <div class="form-group radio-group">
+      <label>Select District:</label>
+      <label><input type="radio" name="district" value="kalaburagi" required> Kalaburagi</label>
+    </div>
+
+    <div class="form-group radio-group">
+      <label>Select Taluk:</label>
+      <label><input type="radio" name="taluk" value="gulbarga" required> Gulbarga</label>
+      <label><input type="radio" name="taluk" value="chincholi"> Chincholi</label>
+      <label><input type="radio" name="taluk" value="shahabad"> Shahabad</label>
+      <label><input type="radio" name="taluk" value="sedam"> Sedam</label>
+      <label><input type="radio" name="taluk" value="wadi"> Wadi</label>
+      <label><input type="radio" name="taluk" value="afzalpur"> Afzalpur</label>
+      <label><input type="radio" name="taluk" value="raichur"> Raichur</label>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    // Stream data for each qualification
+    const streams = {
+      diploma: ["Computer Science", "Mechanical", "Civil", "Electronics"],
+      iti: ["Electrician", "Fitter", "Welder", "Machinist"],
+      puc: ["Science", "Commerce", "Arts"]
+    };
+
+    // Handle qualification change
+    function handleQualificationChange() {
+      const qualification = document.getElementById("qualification").value;
+      const streamGroup = document.getElementById("streamGroup");
+      const customStreamGroup = document.getElementById("customStreamGroup");
+
+      if (qualification === "other") {
+        streamGroup.style.display = "none";
+        customStreamGroup.style.display = "block";
+      } else {
+        streamGroup.style.display = "block";
+        customStreamGroup.style.display = "none";
+        updateStreams(qualification);
+      }
+    }
+
+    // Update streams based on qualification
+    function updateStreams(qualification) {
+      const streamSelect = document.getElementById("stream");
+      streamSelect.innerHTML = '<option value="">--Select Stream--</option>';
+
+      if (qualification && streams[qualification]) {
+        streamSelect.disabled = false;
+        streams[qualification].forEach(stream => {
+          const option = document.createElement("option");
+          option.value = stream.toLowerCase();
+          option.textContent = stream;
+          streamSelect.appendChild(option);
+        });
+      } else {
+        streamSelect.disabled = true;
+      }
+    }
+
+    // Update full phone number display
+    function updateFullNumber() {
+      const countryCode = document.getElementById("countryCode").value;
+      const contact = document.getElementById("contact").value;
+      const fullNumberDisplay = document.getElementById("fullNumberDisplay");
+
+      fullNumberDisplay.textContent = `Full Number: ${countryCode} ${contact}`;
+    }
+
+    // Validate form
+    function validateForm() {
+      const name = document.getElementById("name").value;
+      const contact = document.getElementById("contact").value;
+
+      // Validate name
+      const nameRegex = /^[A-Za-z\s]+$/;
+      if (!nameRegex.test(name)) {
+        alert("Name should contain only alphabets and spaces.");
+        return false;
+      }
+
+      // Validate contact
+      const contactRegex = /^[0-9]+$/;
+      if (!contactRegex.test(contact)) {
+        alert("Contact number should contain only numbers.");
+        return false;
+      }
+
+      alert("Registration Successful!");
+      return true;
+    }
+  </script>
+</body>
+</html>
