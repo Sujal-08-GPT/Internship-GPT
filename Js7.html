@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Functional Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin: 20px;
+    }
+    .stopwatch, .digital-clock, .analog-clock, .date-picker, .slider {
+      margin: 20px 0;
+    }
+    #analog-clock {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      position: relative;
+      border: 5px solid black;
+      border-radius: 50%;
+      background: #f4f4f4;
+    }
+    .hand {
+      width: 2px;
+      height: 50%;
+      background: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: bottom;
+      transform: translate(-50%, -100%) rotate(90deg);
+    }
+    .slider img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+    input[type="date"], input[type="datetime-local"], input[type="time"], input[type="week"], input[type="month"] {
+      margin: 5px 0;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+      <!-- Stopwatch -->
+    <div class="stopwatch">
+      <h2>Stopwatch</h2>
+      <span id="stopwatch">00:00:00</span>
+      <br>
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="stopStopwatch()">Stop</button>
+      <button onclick="resetStopwatch()">Reset</button>
+    </div>
+
+    <!-- Digital Clock -->
+    <div class="digital-clock">
+      <h2>Digital Clock</h2>
+      <span id="digital-clock"></span>
+    </div>
+
+    <!-- Analog Clock -->
+    <div class="analog-clock">
+      <h2>Analog Clock</h2>
+      <div id="analog-clock">
+        <div class="hand" id="hour-hand"></div>
+        <div class="hand" id="minute-hand"></div>
+        <div class="hand" id="second-hand"></div>
+      </div>
+    </div>
+
+    <!-- Date Picker -->
+    <div class="date-picker">
+      <h2>Select a Date</h2>
+      <input type="date"><br>
+      <input type="datetime-local"><br>
+      <input type="time"><br>
+      <input type="week"><br>
+      <input type="month">
+    </div>
+
+    <!-- Image Slider -->
+    <div class="slider">
+      <h2>Image Slider</h2>
+      <img id="slider-image" alt="Slider Image">
+    </div>
+  </div>
+
+  <script>
+    // Stopwatch
+    let stopwatchInterval;
+    let stopwatchTime = 0;
+    function formatTime(ms) {
+      const seconds = Math.floor(ms / 1000) % 60;
+      const minutes = Math.floor(ms / 60000) % 60;
+      const hours = Math.floor(ms / 3600000);
+      return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+    }
+    function startStopwatch() {
+      if (!stopwatchInterval) {
+        const startTime = Date.now() - stopwatchTime;
+        stopwatchInterval = setInterval(() => {
+          stopwatchTime = Date.now() - startTime;
+          document.getElementById('stopwatch').textContent = formatTime(stopwatchTime);
+        }, 1000);
+      }
+    }
+    function stopStopwatch() {
+      clearInterval(stopwatchInterval);
+      stopwatchInterval = null;
+    }
+    function resetStopwatch() {
+      stopStopwatch();
+      stopwatchTime = 0;
+      document.getElementById('stopwatch').textContent = '00:00:00';
+    }
+
+    // Digital Clock
+    function updateDigitalClock() {
+      const now = new Date();
+      document.getElementById('digital-clock').textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateDigitalClock, 1000);
+
+    // Analog Clock
+    function updateAnalogClock() {
+      const now = new Date();
+      const seconds = now.getSeconds() / 60;
+      const minutes = (now.getMinutes() + seconds) / 60;
+      const hours = (now.getHours() % 12 + minutes) / 12;
+      document.getElementById('hour-hand').style.transform = `translate(-50%, -100%) rotate(${hours * 360}deg)`;
+      document.getElementById('minute-hand').style.transform = `translate(-50%, -100%) rotate(${minutes * 360}deg)`;
+      document.getElementById('second-hand').style.transform = `translate(-50%, -100%) rotate(${seconds * 360}deg)`;
+    }
+    setInterval(updateAnalogClock, 1000);
+
+    // Image Slider
+    const images = [
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAADkCAMAAAAhRJjHAAAAPFBMVEUAAAD////X19fp6enV1dXz8/NLS0tCQkKKiorf39+BgYH5+fnCwsKtra2IiIi9vb2YmJihoaFAAAADu7u7d3d3l5eXHyRbQAAADjElEQVR4nO3aS67CIBAFsZdEVb//9zzIMiQSVkbOdIexdPLePNHjcbgEAAAAAAAAAAAAAAAD4NlFvLlWdnGbUluXcF2bt9BYaHZX9RQmrbnb9suzdRT83V1e1R9fOTjsf51rVj1XfKvtNtNvf1H6rLVXfnY8m/f1fKqzdVTPavZj5LPcdFcYH4xdL2av8btNp35HytdKPZgvZjGvVTrTl+9tfHfvuQutOxu8tdGTL/RndMdT8m/R/SZm1/OjN3bPnfHnbVPz9j5aP8WAAAAAAAAAAAAAAAAAAAAAAD8G/ojvhuCkBfvN8AAAAASUVORK5CYII=",
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANcAAADkCAMAAAAhRJjHAAAAPFBMVEUAAAD////X19fp6enV1dXz8/NLS0tCQkKKiorf39+BgYH5+fnCwsKtra2IiIi9vb2YmJihoaFAAAADu7u7d3d3l5eXHyRbQAAADjElEQVR4nO3aS67CIBAFsZdEVb//9zzIMiQSVkbOdIexdPLePNHjcbgEAAAAAAAAAAAAAAAD4NlFvLlWdnGbUluXcF2bt9BYaHZX9RQmrbnb9suzdRT83V1e1R9fOTjsf51rVj1XfKvtNtNvf1H6rLVXfnY8m/f1fKqzdVTPavZj5LPcdFcYH4xdL2av8btNp35HytdKPZgvZjGvVTrTl+9tfHfvuQutOxu8tdGTL/RndMdT8m/R/SZm1/OjN3bPnfHnbVPz9j5aP8WAAAAAAAAAAAAAAAAAAAAAAD8G/ojvhuCkBfvN8AAAAASUVORK5CYII="
+    ];
+    let currentImageIndex = 0;
+    const sliderImage = document.getElementById('slider-image');
+    setInterval(() => {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      sliderImage.src = images[currentImageIndex];
+    }, 3000);
+  </script>
+</body>
+</html>
