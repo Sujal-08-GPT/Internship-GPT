@@ -1,0 +1,50 @@
+<script>
+  d=new Date();
+  day=d.getDay();
+  document.write(d.getDay());
+  switch(day){
+    case 0: document.write(" Today is Sunday");
+    break;
+    case 1: document.write(" Today is Monday");
+    break;
+    case 2: document.write(" Today is Tuesday");
+    break;
+    case 3: document.write(" Today is Wednesday");
+    break;
+    case 4: document.write(" Today is Thursday");
+    break;
+    case 5: document.write(" Today is Friday");
+    break;
+    case 6: document.write(" Today is Saturday");
+    break;
+  }
+</script>
+  }
+</script>
+<h2>While loop (checks all conditions to top)</h2>
+<script>
+  i=1;
+  while(i<=5){
+    document.write(i++);
+    document.write("<br>");
+  }
+</script>
+<h2>Do While loop (checks all conditions to bottom and min output)</h2>
+<script>
+  i=6;
+  do
+  {
+    document.write(i++);
+    document.write("<br>");
+  }
+  while(i<=5)
+</script>
+<h2>For loop (checks all conditions till the specified condition is true)</h2>
+<script>
+ 
+  for(let i=5;i<=10;i++){
+    document.write(i);
+    document.write("<br>");
+    break;
+  }
+</script>
