@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Stopwatch</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .digital {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .clock {
+            position: relative;
+            margin: 20px auto;
+            width: 200px;
+            height: 200px;
+            border: 5px solid #007bff;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .clock::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #007bff;
+            border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hand {
+            position: absolute;
+            width: 2px;
+            background: #007bff;
+            top: 50%;
+            left: 50%;
+            transform-origin: bottom center;
+            transform: translate(-50%, -90%) rotate(0deg);
+        }
+        .hand.second { height: 90px; }
+        .hand.minute { height: 70px; background: #0056b3; }
+        .hand.hour { height: 50px; background: #003580; }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background: #007bff;
+            color: white;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .popup-message {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Stopwatch</h1>
+    <div class="digital" id="digital">00:00:00</div>
+    <div class="clock">
+        <div class="hand hour" id="hour"></div>
+        <div class="hand minute" id="minute"></div>
+        <div class="hand second" id="second"></div>
+    </div>
+    <button id="start">Start</button>
+    <button id="pause">Pause</button>
+    <button id="stop">Stop</button>
+    <button id="reset">Reset</button>
+
+    <div class="popup-message" id="popup-message">Action performed!</div>
+
+    <script>
+        let timer = null;
+        let elapsedTime = 0; // In milliseconds
+
+        const digitalDisplay = document.getElementById('digital');
+        const hourHand = document.getElementById('hour');
+        const minuteHand = document.getElementById('minute');
+        const secondHand = document.getElementById('second');
+        const popupMessage = document.getElementById('popup-message');
+
+        // Format elapsed time into HH:MM:SS
+        function formatTime(ms) {
+            const totalSeconds = Math.floor(ms / 1000);
+            const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, '0');
+            const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            return `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Update the digital and analog clock display
+        function updateDisplay() {
+            digitalDisplay.textContent = formatTime(elapsedTime);
+
+            const seconds = (elapsedTime / 1000) % 60;
+            const minutes = (elapsedTime / (1000 * 60)) % 60;
+            const hours = (elapsedTime / (1000 * 60 * 60)) % 12;
+
+            secondHand.style.transform = `translate(-50%, -90%) rotate(${seconds * 6}deg)`;
+            minuteHand.style.transform = `translate(-50%, -70%) rotate(${minutes * 6}deg)`;
+            hourHand.style.transform = `translate(-50%, -50%) rotate(${hours * 30}deg)`;
+        }
+
+        // Start the timer
+        function startTimer() {
+            if (timer) return; // Prevent multiple intervals
+            const startTime = Date.now() - elapsedTime;
+            timer = setInterval(() => {
+                elapsedTime = Date.now() - startTime;
+                updateDisplay();
+            }, 50);
+            showPopup("Timer Started!");
+        }
+
+        // Pause the timer
+        function pauseTimer() {
+            clearInterval(timer);
+            timer = null;
+            showPopup("Timer Paused!");
+        }
+
+        // Stop the timer and reset the time
+        function stopTimer() {
+            pauseTimer();
+            elapsedTime = 0;
+            updateDisplay();
+            showPopup("Timer Stopped!");
+        }
+
+        // Reset the timer (pause it and reset to 0)
+        function resetTimer() {
+            pauseTimer();
+            elapsedTime = 0;
+            updateDisplay();
+            showPopup("Timer Reset!");
+        }
+
+        // Show the custom popup message
+        function showPopup(message) {
+            popupMessage.textContent = message;
+            popupMessage.style.display = 'block';
+
+            setTimeout(() => {
+                popupMessage.style.display = 'none';
+            }, 5000); // Hide the popup after 5 seconds
+        }
+
+        // Event listeners for buttons
+        document.getElementById('start').addEventListener('click', startTimer);
+        document.getElementById('pause').addEventListener('click', pauseTimer);
+        document.getElementById('stop').addEventListener('click', stopTimer);
+        document.getElementById('reset').addEventListener('click', resetTimer);
+
+        // Initialize display
+        updateDisplay();
+    </script>
+</body>
+</html>
