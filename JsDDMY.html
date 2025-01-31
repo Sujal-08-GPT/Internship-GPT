@@ -1,0 +1,47 @@
+<script>
+  document.write(Date());
+</script>
+<script>
+  d=new Date();
+  day=d.getDay();
+  date=d.getDate();
+  month=d.getMonth();
+  year=d.getFullYear();
+ 
+ dayinfo=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+ daydata=dayinfo[day];
+ 
+ monthinfo=["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+ monthdata=monthinfo[month];
+ 
+ c=date+"-"+daydata+"-"+monthdata+"-"+year;
+</script>
+<table border="1">
+  <tr>
+    <td>Day</td><td><script>
+      document.write(daydata);
+    </script></td>
+  </tr>
+    </script></td>
+  </tr>
+    <tr>
+    <td>Date</td><td><script>
+      document.write(date);
+    </script></td>
+  </tr>
+      <tr>
+    <td>Month</td><td><script>
+      document.write(monthdata);
+    </script></td>
+  </tr>
+    <tr>
+    <td>Year</td><td><script>
+      document.write(year);
+    </script></td>
+  </tr>
+      <tr>
+    <td>Concatenation</td><td><script>
+      document.write(c);
+    </script></td>
+  </tr>
+</table>
