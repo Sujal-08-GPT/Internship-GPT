@@ -1,0 +1,38 @@
+<p>Textbox to accept only (0-9)</p>
+<input type="text" id="txt1" /><br />
+<input type="button" value="check" onclick="tt1()" />
+<script>
+  function tt1(){
+    a=document.getElementById("txt1").value;
+    p=/[0-9]/g;
+    document.getElementById("output1").innerHTML=a.match(p);
+    
+  }
+</script>
+<p id="output1"></p>
+
+<p>Textbox to accept only (a-z,A-Z)</p>
+<input type="text" id="txt2" /><br />
+<input type="button" value="check" onclick="tt2()" />
+<script>
+  function tt2(){
+    a=document.getElementById("txt2").value;
+    p=/[a-zA-Z]/g;
+    document.getElementById("output2").innerHTML=a.match(p);
+    
+  }
+</script>
+<p id="output2"></p>
+
+<p>Textbox to accept only (text, special character, space)</p>
+<input type="text" id="txt3" /><br />
+<input type="button" value="check" onclick="tt3()" />
+<script>
+  function tt3(){
+    a=document.getElementById("txt3").value;
+    p=/[a-z,A-Z\s\W]/g;
+    document.getElementById("output3").innerHTML=a.match(p);
+    
+  }
+</script>
+<p id="output3"></p>
