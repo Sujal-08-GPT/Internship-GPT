@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JQuery</title>
+  <style type="text/css" media="all">
+  .box{
+      height: 200px;
+      width: 200px;
+      background-color: darkgray;
+     }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" charset="utf-8">
+  $(function (){
+ $("#hide").click(function(){$(".box").hide(3000)})
+ $("#show").click(function(){$(".box").show(3000)})
+ $("#toggle").click(function(){$(".box").toggle(1000)})
+ $("#fadein").click(function(){$(".box").fadeIn(3000)})
+ $("#fadeout").click(function(){$(".box").fadeOut(3000)})
+ $("#fadetoggle").click(function(){$(".box").fadeToggle(3000)})
+ $("#fadeto").click(function(){$(".box").fadeTo(3000,0.5)})
+    
+  })
+  
+  </script>
+  
+</head>
+
+
+<body>
+  <div class="box"></div>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+  <button id="toggle">Toggle</button>
+  <button id="fadein">Fadein</button>
+  <button id="fadeout">fadeout</button>
+  <button id="fadetoggle">fadeToggle</button>
+  <button id="fadeto">fadeTo</button>
+</body>
+
+
+</html>
+Explain this code in simple words
