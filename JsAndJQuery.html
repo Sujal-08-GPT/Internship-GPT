@@ -11,6 +11,9 @@
       width: 200px;
       background-color: darkgray;
      }
+  .extra{
+    border: 5px solid red;
+  }
   </style>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
   <script type="text/javascript" charset="utf-8">
@@ -22,6 +25,14 @@
  $("#fadeout").click(function(){$(".box").fadeOut(3000)})
  $("#fadetoggle").click(function(){$(".box").fadeToggle(3000)})
  $("#fadeto").click(function(){$(".box").fadeTo(3000,0.5)})
+ $("#slideup").click(function(){$(".box").slideUp(3000)})
+ $("#slidedown").click(function(){$(".box").slideDown(3000)})
+ $("#slidetoggle").click(function(){$(".box").slideToggle(3000)})
+ $("#addclass").click(function(){$(".box").addClass("extra")})
+ $("#removeclass").click(function(){$(".box").removeClass("extra")})
+ $("#css").click(function(){$(".box").css({"color":"black"})})
+ $("#append").click(function(){$(".box").append('Diginsare Technology')})
+ $("#prepend").click(function(){$(".box").prepend('Diginsare Technology')})
     
   })
   
@@ -31,7 +42,8 @@
 
 
 <body>
-  <div class="box"></div>
+  <p>Diginsare</p>
+  <div class="box">Hi</div>
   <button id="hide">Hide</button>
   <button id="show">Show</button>
   <button id="toggle">Toggle</button>
@@ -39,8 +51,19 @@
   <button id="fadeout">fadeout</button>
   <button id="fadetoggle">fadeToggle</button>
   <button id="fadeto">fadeTo</button>
+  <button id="slideup">slideup</button>
+  <button id="slidedown">slidedown</button>
+  <button id="slidetoggle">slidetoggle</button>
+  <button id="addclass">addclass</button>
+  <button id="removeclass">removeclass</button>
+  <button id="css">css</button>
+  <button id="append">Append</button>
+  <button id="prepend">prepend</button>
+  <button id="after">after</button>
+  <button id="before">before</button>
+  
+  
 </body>
 
 
 </html>
-Explain this code in simple words
