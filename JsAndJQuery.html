@@ -33,16 +33,25 @@
  $("#css").click(function(){$(".box").css({"color":"black"})})
  $("#append").click(function(){$(".box").append('Diginsare Technology')})
  $("#prepend").click(function(){$(".box").prepend('Diginsare Technology')})
-    
+ $("#css").click(function(){$(".box").css({"color":"blue"})})
+ $("#prev").click(function(){$("#demo").prev().css({"color":"red"})})
+ $("#next").click(function(){$("#demo").next().css({"color":"green"})})
+ $("#prevAll").click(function(){$("#demo").prevAll().css({"color":"red"})})
+ $("#nextAll").click(function(){$("#demo").nextAll().css({"color":"red"})})
   })
-  
+
   </script>
-  
+
 </head>
 
 
 <body>
-  <p>Diginsare</p>
+  <div class="box">
+    hi
+  </div>
+  <h1>Welcome to Digisnare technologies</h1>
+  <p id="demo">Diginsare</p>
+  <h2>Welcome back</h2>
   <div class="box">Hi</div>
   <button id="hide">Hide</button>
   <button id="show">Show</button>
@@ -61,8 +70,11 @@
   <button id="prepend">prepend</button>
   <button id="after">after</button>
   <button id="before">before</button>
-  
-  
+  <button id="prev">prev</button>
+  <button id="next">next</button>
+  <button id="prevAll">prevall</button>
+  <button id="nextAll">nextall</button>
+
 </body>
 
 
