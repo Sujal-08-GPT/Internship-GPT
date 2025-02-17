@@ -4,35 +4,51 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
     <title>GPT Kalaburagi</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <style>
-        .carousel-indicators [data-bs-target]{
+        /* Custom styles for carousel indicators */
+        .carousel-indicators [data-bs-target] {
             width: 20px;
             height: 20px;
-            border-radius:50%;
+            border-radius: 50%;
             background-color: #555;
         }
-        .bg-custom{
-          background-color: lightblue;
+
+        /* Custom background color */
+        .bg-custom {
+            background-color: lightblue;
         }
     </style>
 </head>
 <body>
 
+<!-- Navbar Section -->
 <nav class="navbar navbar-expand-lg bg-primary-subtle">
     <div class="container-fluid">
         <a class="navbar-brand fw-bold" href="#"><i class="fas fa-school"></i> GPT Kalaburagi</a>
+        
+        <!-- Mobile Toggle Button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon bg-white"></span>
         </button>
+
+        <!-- Navbar Links -->
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item"><a class="nav-link active" href="#"><i class="fas fa-home"></i> Home</a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-info-circle"></i> About Us</a></li>
+                
+                <!-- Dropdown for Branches -->
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
                         <i class="fas fa-book-open"></i> Branches
@@ -46,6 +62,7 @@
                         <li><a class="dropdown-item" href="#"><i class="fas fa-bolt"></i> Electrical</a></li>
                     </ul>
                 </li>
+
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-envelope"></i> Contact Us</a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-chart-line"></i> Results</a></li>
                 <li class="nav-item"><a class="nav-link" href="#"><i class="fas fa-history"></i> History</a></li>
@@ -54,6 +71,7 @@
     </div>
 </nav>
 
+<!-- Image Slider (Carousel) -->
 <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></button>
@@ -71,131 +89,134 @@
       <img src="https://www.digisnare.com/images/slider/digisnare-technologies-team.png" class="d-block w-100" alt="Slide 3">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </button>
 </div>
 
-<!-- Updated Row with Images and GPT Kalaburagi Content -->
+<!-- Main Content Section -->
 <div class="container-fluid py-5">
   <div class="row">
-    
-      <!-- First Image -->
-        <div class=" col-md-3">
-            <img src="https://gpt.karnataka.gov.in/gptkalaburagi/public/uploads/hod_photo1690864593.jpeg" class="img-fluid img-thumbnail">
-            <h5>Shri. Jagadeesh, IAS</h5>
-            <p>Commissioner, Dept. of Collegiate & Technical Education</p>
-        </div>
+      <!-- Image 1 -->
+      <div class="col-md-3">
+          <img src="https://gpt.karnataka.gov.in/gptkalaburagi/public/uploads/hod_photo1690864593.jpeg" class="img-fluid img-thumbnail">
+          <h5>Shri. Jagadeesh, IAS</h5>
+          <p>Commissioner, Dept. of Collegiate & Technical Education</p>
+      </div>
 
-        <!-- GPT Kalaburagi Content -->
-        <div class="col-md-6">
-            <h2>GOVERNMENT POLYTECHNIC KALABURAGI</h2>
-            <p>Government Polytechnic Kalaburagi is a Government Institution situated at Kalaburagi and was established in 1956. It is located in a sprawling campus of 6.7 acres. The Polytechnic is wholly run by the Government of Karnataka under the Directorate of Collegiate and Technical Education.</p>
-            <p>It is a highly reputed institution receiving various project grants from both the Central and State Governments. This Polytechnic serves as a nodal center for online state-level diploma admissions and zonal valuation for Kalaburagi, Yadgir, Bidar & Raichur districts.</p>
-        </div>
+      <!-- Description Content -->
+      <div class="col-md-6">
+          <h2>GOVERNMENT POLYTECHNIC KALABURAGI</h2>
+          <p>Government Polytechnic Kalaburagi is a Government Institution situated at Kalaburagi and was established in 1956...</p>
+      </div>
 
-        <!-- Second Image -->
-        <div class=" col-md-3">
-            <img src="https://gpt.karnataka.gov.in/gptkalaburagi/public/uploads/minister_photo1688543090.jpg" class="img-fluid img-thumbnail">
-            <b>Dr. M.C. Sudhakar</b>
-            <p>Higher Education Minister, Govt. of Karnataka</p>
-        </div>
-    </div>
+      <!-- Image 2 -->
+      <div class="col-md-3">
+          <img src="https://gpt.karnataka.gov.in/gptkalaburagi/public/uploads/minister_photo1688543090.jpg" class="img-fluid img-thumbnail">
+          <b>Dr. M.C. Sudhakar</b>
+          <p>Higher Education Minister, Govt. of Karnataka</p>
+      </div>
+  </div>
 </div>
 
+<!-- Accordion Section -->
 <div class="container-fluid">
- <div class="container bg-custom py-5">
-   <div class="row">
-     <div class="offset-md-2 col-md-4">
-       <h6>Transaction of Business Rules <i class="bi bi-copy text-white"></i></h6>
-      <!--Accordian01-->
-       <div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-         Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+  <div class="container bg-custom py-5">
+    <div class="row">
+      <div class="offset-md-2 col-md-4">
+        <h6>Transaction of Business Rules <i class="bi bi-copy text-white"></i></h6>
+
+        <!-- Accordion Group 1 -->
+        <div class="accordion" id="accordionGroup1">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                Accordion Item #1
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionGroup1">
+              <div class="accordion-body">Content for first accordion item.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                Accordion Item #2
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionGroup1">
+              <div class="accordion-body">Content for second accordion item.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                Accordion Item #3
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionGroup1">
+              <div class="accordion-body">Content for third accordion item.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                Accordion Item #4
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionGroup1">
+              <div class="accordion-body">Content for fourth accordion item.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                Accordion Item #5
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionGroup1">
+              <div class="accordion-body">Content for fifth accordion item.</div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+
+      <!-- Accordion Section with Download Icons -->
+      <div class="col-md-4">
+        <h6>Important Links <i class="bi bi-copy text-white"></i></h6>
+        
+        <!-- Accordion Group 2 -->
+        <div class="accordion" id="accordionGroup2">
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                <i class="bi bi-download me-2"></i> Accordion Item #6
+              </button>
+            </h2>
+            <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionGroup2">
+              <div class="accordion-body">Content for sixth accordion item.</div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                <i class="bi bi-download me-2"></i> Accordion Item #7
+              </button>
+            </h2>
+            <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionGroup2">
+              <div class="accordion-body">Content for seventh accordion item.</div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
+
     </div>
   </div>
 </div>
-     </div>
-     <div class="col-md-4">
-       Important Links <i class="bi bi-copy text-white"></i>
-     <!--Accordian02-->
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                <i class="bi bi-download text-white"></i> Accordion Item #1
-      </button>
-    </h2>
-    <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                  <i class="bi bi-download text-white"></i> Accordion Item #2
-      </button>
-    </h2>
-    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-          <i class="bi bi-download text-white"></i> Accordion Item #3
-      </button>
-    </h2>
-    <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-      <div class="accordion-body">
-        <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-      </div>
-    </div>
-  </div>
-</div>
-     </div>
-   </div>
- </div>
-</div>
+
+<!-- Bootstrap JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
