@@ -1,5 +1,4 @@
-<!doctype html>
-<html lang="en">
+<html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -220,74 +219,154 @@
 </div><!-- container fluid-->
 
 <div class="container-fluid py-5">
- <div class="container">
-   <h3 class="text-center">News and Events</h3>
-   <div class="row">
-     <div class="col-md-3 text-center py-5">
-       <div class="bg-info p-2">
-         <i class="bi bi-box-arrow-in-right text-white" style="font-size:30px"></i>
-         <h6>College Login</h6>
-         <p>This is government polytechnic kalaburagi login section to enroll the access of institution</p>
-       </div><!--end of col md 3-->
-         <div class="col-md-3 text-center py-5">
-       <div class="bg-info p-2">
-         <i class="bi bi-box-arrow-in-right text-white" style="font-size:30px"></i>
-         <h6>College Login</h6>
-         <p>This is government polytechnic kalaburagi login section to enroll the access of institution</p>
-       </div><!--end of col md 3-->
-  <div class="col-md-3 text-center py-5">
-       <div class="bg-info p-2">
-         <i class="bi bi-box-arrow-in-right text-white" style="font-size:30px"></i>
-         <h6>College Login</h6>
-         <p>This is government polytechnic kalaburagi login section to enroll the access of institution</p>
-       </div><!--end of col md 3-->
-  <div class="col-md-3 text-center py-5">
-       <div class="bg-info p-2">
-         <i class="bi bi-box-arrow-in-right text-white" style="font-size:30px"></i>
-         <h6>College Login</h6>
-         <p>This is government polytechnic kalaburagi login section to enroll the access of institution</p>
-       </div><!--end of col md 3-->
+  <div class="container">
+    <h3 class="text-center ">News and Event</h3>
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <div class="bg-info p-2">
+          <i class="bi bi-box-arrow-in-right text-white"style:font-size="30px" ></i>
+          <h6>College Login</h6>
+          <p>Stay updated! Click 'Read More' for the latest insight in his sections hsjjyhrbbbn</p>
+          
+        </div>
+        
+      </div><!--end of col md 3-->
+      
+      <div class="col-md-3 text-center">
+        <div class="bg-info p-2">
+          <i class="bi bi-box-arrow-in-right text-white"></i>
+          <h6>Department of Technical Education</h6>
+          <p>Get the latest updates-Click 'Read More' to explore this section</p>
+          
+        </div>
+        
+      </div><!--end of col md 3-->
+      
+      <div class="col-md-3 text-center">
+        <div class="bg-info p-2">
+          <i class="bi bi-box-arrow-in-right text-white"></i>
+          <h6>College Login</h6>
+          <p> Polytechnic Kalaburagi is a Government Institution situated at Kalaburagi and was established</p>
+          
+        </div>
+        
+      </div><!--end of col md 3-->
+      
+      <div class="col-md-3 text-center">
+        <div class="bg-info p-2">
+          <i class="bi bi-box-arrow-in-right text-white"></i>
+          <h6>College Login</h6>
+          <p> Polytechnic Kalaburagi is a Government Institution situated at Kalaburagi and was established</p>
+          
+        </div>
+        
+      </div><!--end of col md 3-->
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
 
-       
-     </div>
-   </div>
- </div>
-</div><!-- end of container fluid-->
+
 
 <div class="container-fluid py-5" id="bg-common">
- <div class="container">
-   <h3 class="text-center">News and Events</h3>
-   <div class="row">
-     <div class="col-md-3 text-center py-5">
-       <div class="bg-info p-2">
-         <i class="bi bi-box-arrow-in-right"></i>
-         <h6>College Login</h6>
-         <p>This is government polytechnic kalaburagi login section to enroll the access of institution</p>
-       </div><!--end of col md 3-->
-         <div class="col-md-3 text-center py-5">
-       <div class="bg-info p-2">
-         <i class="bi bi-box-arrow-in-right"></i>
-         <h6>College Login</h6>
-         <p>This is government polytechnic kalaburagi login section to enroll the access of institution</p>
-       </div><!--end of col md 3-->
-  <div class="col-md-3 text-center py-5">
-       <div class="bg-info p-2">
-         <i class="bi bi-box-arrow-in-right"></i>
-         <h6>College Login</h6>
-         <p>This is government polytechnic kalaburagi login section to enroll the access of institution</p>
-       </div><!--end of col md 3-->
-  <div class="col-md-3 text-center py-5">
-       <div class="bg-info p-2">
-         <i class="bi bi-box-arrow-in-right"></i>
-         <h6>College Login</h6>
-         <p>This is government polytechnic kalaburagi login section to enroll the access of institution</p>
-       </div><!--end of col md 3-->
+  <div class="container">
+    <h3 class="text-center">News and Event</h3>
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <div class="bg-info p-2">
+          <i class="bi bi-box-arrow-in-right text-white"></i>
+          <h6>College Login</h6>
+          <p> Polytechnic Kalaburagi is a Government Institution situated at Kalaburagi and was established</p>
+          
+        </div>
+        
+      </div><!--end of col md 3-->
+      
+      <div class="col-md-3 text-center">
+        <div class="bg-info p-2">
+          <i class="bi bi-box-arrow-in-right text-white"></i>
+          <h6>College Login</h6>
+          <p> Polytechnic Kalaburagi is a Government Institution situated at Kalaburagi and was established</p>
+          
+        </div>
+        
+      </div><!--end of col md 3-->
+      
+      <div class="col-md-3 text-center">
+        <div class="bg-info p-2">
+          <i class="bi bi-box-arrow-in-right text-white"></i>
+          <h6>College Login</h6>
+          <p> Polytechnic Kalaburagi is a Government Institution situated at Kalaburagi and was established</p>
+          
+        </div>
+        
+      </div><!--end of col md 3-->
+      
+      <div class="col-md-3 text-center">
+        <div class="bg-info p-2">
+          <i class="bi bi-box-arrow-in-right text-white"></i>
+          <h6>College Login</h6>
+          <p> Polytechnic Kalaburagi is a Government Institution situated at Kalaburagi and was established</p>
+          
+        </div>
+        
+      </div><!--end of col md 3-->
+ 
+        
+      </div>
+      
+      
+    </div>
+    
+  </div>
+  
+</div>
+<div class="container-fluid my-5">
+  
 
-       
-     </div>
-   </div>
- </div>
-</div><!-- end of container fluid-->
+<div class="col-md-5">
+  <div class="row">
+   
+  <h4> Contact Us </h4>
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.9866096525025!2d76.8338389!3d17.3161952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc8c0a910ce5547%3A0x667547cc95631ea8!2sGPT%20Government%20Polytechnic%20Kalaburagi!5e0!3m2!1sen!2sin!4v1740376919779!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+  <div class="col-md-4">
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Name</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your name">
+  </div>
+    <div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Email address</label>
+  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Enter your email">
+</div>
+<div class="mb-3">
+  <label for="exampleFormControlTextarea1" class="form-label"></label>Message
+  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+</div>
+<div class="col-md-3">
+  <button type="button" class="btn btn-outline-dark">Submit</button>
+  
+</div>
+
+    <div class="col-md-3">
+      GPT Government Polytechnic Kalaburagi<br>
+8R8M+FGG,<br> PDA Engineering College Rd, <br> Aiwan-E-Shahi Area,<br> Shambhognlli, Kalaburagi, Karnataka 585102
+      
+    </div>
+    
+  </div>
+  
+</div>
+</div>
+</div>
+
+<div class="container-fluid bg-primary fw-bold py-2 text-white text-center">@Designed by SUJAL 
+  
+</div>
+
 
 
 <!-- Bootstrap JavaScript -->
