@@ -1,0 +1,20 @@
+--in XAMPP server (apache,MySQL,file explorer)
+create database internship;
+-- Create table
+CREATE TABLE FEEDBACK (
+  Id INTEGER PRIMARY KEY,
+  name VARCHAR(50),
+  email VARCHAR(50),
+  contactno VARCHAR(20),
+  message VARCHAR(100),
+  datetime DATETIME
+);
+
+-- Insert data
+INSERT INTO FEEDBACK (Id, name, email, contactno, message, datetime) VALUES 
+(1, 'MSD', 'msd@example.com', '1234567890', 'Hello, Mahi!', '2025-03-05 10:00:00'),
+(2, 'VIRAT', 'virat@example.com', '0987654321', 'Hello, Chiku!', '2025-03-05 11:00:00'),
+(3, 'ROHIT', 'rohit@example.com', '1122334455', 'Hello, Hitman!', '2025-03-05 12:00:00');
+
+-- Fetch all records
+SELECT * FROM FEEDBACK;
