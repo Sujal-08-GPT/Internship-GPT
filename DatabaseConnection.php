@@ -40,10 +40,12 @@ $message=$_POST['message'];
 
 $ins="insert into feedback(name,email, contactno, message, datetime,Values('$name','$email','$contactno','$message',now())";
 
-
+$status=mysqli_query($con,$ins);
+if($status){
+     echo "Success"
 }
-
-
-
-
+else{
+     echo "Fail"
+}
+}
 ?>
